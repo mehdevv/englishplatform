@@ -1,5 +1,5 @@
 /** 4-digit PIN — change here if needed */
-export const PIN_CODE = "1234";
+export const PIN_CODE = "0505";
 
 export const HEARTS_PER_LESSON = 3;
 export const XP_PER_CORRECT = 10;

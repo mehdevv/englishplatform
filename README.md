@@ -14,7 +14,7 @@ Open the URL shown in the terminal (usually `http://localhost:5173`).
 
 ## PIN code
 
-Default PIN: **`1234`** (4 digits) — stored in Supabase when connected, or in `src/config.ts` for offline mode.
+Default PIN: **`0505`** (4 digits) — stored in Supabase when connected, or in `src/config.ts` for offline mode.
 
 ## Supabase (cloud progress)
 

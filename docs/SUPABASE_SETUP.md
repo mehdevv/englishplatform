@@ -35,7 +35,7 @@ Restart `npm run dev` after creating `.env`.
    - `learner_progress` — XP, streak, completed lessons, etc.
    - `login_with_pin` / `save_learner_progress` — secure RPCs (anon key can only call these, not read all rows)
 
-Default account seeded: PIN **`1234`**, name **Houda**.
+Default account seeded: PIN **`0505`**, name **Houda**.
 
 ### Add another learner
 
@@ -55,4 +55,10 @@ Progress row is created automatically by the trigger.
 
 ## Without Supabase
 
-If `.env` is missing, the app falls back to **local PIN** from `src/config.ts` (`PIN_CODE = "1234"`) and `localStorage` only.
+If `.env` is missing, the app falls back to **local PIN** from `src/config.ts` (`PIN_CODE = "0505"`) and `localStorage` only.
+
+### Change PIN on an existing Supabase project
+
+```sql
+update public.learners set pin_code = '0505' where pin_code = '1234';
+```

@@ -175,10 +175,13 @@ grant execute on function public.save_learner_progress (text, jsonb) to anon, au
 
 -- Seed Houda's account (change PIN here if you want)
 insert into public.learners (pin_code, display_name)
-values ('1234', 'Houda')
+values ('0505', 'Houda')
 on conflict (pin_code) do nothing;
 
 -- Ensure progress row exists for seeded learner
 insert into public.learner_progress (learner_id)
-select id from public.learners where pin_code = '1234'
+select id from public.learners where pin_code = '0505'
 on conflict (learner_id) do nothing;
+
+-- If you already ran an older seed with PIN 1234, run once:
+-- update public.learners set pin_code = '0505' where pin_code = '1234';
