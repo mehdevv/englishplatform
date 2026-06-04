@@ -92,8 +92,11 @@ function App() {
         {screen === "home" && (
           <>
             <div className="welcome-banner">
-              <h1>Salut {displayName} ! 👋</h1>
-              <p>Choisis une leçon et réponds juste pour avancer — style Duolingo.</p>
+              <h1>Salut {displayName} !</h1>
+              <p>
+                Niveau intermédiaire B1–B2 · 50 leçons · 10 univers différents.
+                Réponds juste pour débloquer la suite.
+              </p>
             </div>
             <Dashboard progress={progress} onStartLesson={startLesson} />
           </>

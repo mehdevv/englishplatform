@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { HEARTS_PER_LESSON } from "../config";
-import { getLesson, getNextLessonId } from "../data/lessons";
+import { getLesson, getNextLessonId, getLessonIndex, COURSE_LEVEL_LABEL } from "../data/lessons";
 import { completeLesson, recordAttempt } from "../lib/progress";
 import type { ProgressData } from "../lib/progress";
 
@@ -154,7 +154,7 @@ export function LessonPlayer({ lessonId, onExit, onProgressUpdate, onNextLesson 
 
       <div className="question-area">
         <p className="lesson-label">
-          {lesson.icon} {lesson.titleFr}
+          {COURSE_LEVEL_LABEL} · Leçon {getLessonIndex(lessonId)} · {lesson.titleFr}
         </p>
         <h2 className="question-prompt">{question.promptFr}</h2>
         {question.promptEn && <p className="question-en">{question.promptEn}</p>}
